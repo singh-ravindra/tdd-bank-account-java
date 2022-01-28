@@ -29,4 +29,12 @@ public class AccountTest {
         assertThat(account.getBalance()).isEqualTo(30);
     }
 
+    @Test
+    public void depositAmountWithDecimals(){
+        Account account= new Account(0);
+        account.deposit(10.5);
+        account.deposit(20.5);
+        assertThat(account.getBalance()).isEqualTo(31);
+    }
+
 }
