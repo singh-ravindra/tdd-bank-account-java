@@ -37,4 +37,12 @@ public class AccountTest {
         assertThat(account.getBalance()).isEqualTo(31);
     }
 
+    @Test
+    public void depositHighAmount(){
+        Account account= new Account(0);
+        account.deposit(100000);
+        account.deposit(200000);
+        assertThat(account.getBalance()).isEqualTo(300000);
+    }
+
 }
