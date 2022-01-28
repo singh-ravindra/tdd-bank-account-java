@@ -2,8 +2,18 @@ package org.xpdojo.bank;
 
 public class Account {
 
+    public double balance;
 
-    public int createEmptyAccount() {
-        return  0;
+    public Account(double intialBalanec) {
+        balance=intialBalanec;
+    }
+
+    public void deposit(double amount) {
+        double newBalance= balance+amount;
+        balance=newBalance;
+    }
+
+    public double getBalance(){
+        return balance;
     }
 }
